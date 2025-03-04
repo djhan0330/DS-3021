@@ -15,7 +15,6 @@ import random
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from sklearn.metrics import classification_report
 from sklearn import metrics
-from plot_metric.functions import BinaryClassification #need to pip install plot metric
 
 #%%
 # -------- Data prep --------
@@ -95,13 +94,7 @@ encoded.head()   # note the new columns
 #What types of variables does the get_dummies function work on and does it have a feature to remove the original column?
 
 #%%
-# now we want to drop the old columns we onehot encoded 
-bank_data = bank_data.drop(cat_cols, axis=1)
-
-#%%
-# and then join them
-bank_data = bank_data.join(encoded)
-#What is this join function doing? What is it joining on?
+    
 
 #%%
 print(bank_data.info())
